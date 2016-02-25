@@ -938,3 +938,4 @@
 2016-02-25 9:03:25 - PHP Notice:  Undefined variable: heading in C:\AppServ\www\testopencart\catalog\view\theme\default\template\multiseller\account-order.tpl on line 33
 2016-02-25 9:03:40 - PHP Notice:  Undefined variable: heading in C:\AppServ\www\testopencart\catalog\view\theme\default\template\multiseller\account-order.tpl on line 33
 2016-02-25 9:03:52 - PHP Notice:  Undefined variable: heading in C:\AppServ\www\testopencart\catalog\view\theme\default\template\multiseller\account-order.tpl on line 33
+2016-02-25 14:16:07 - PHP Notice:  Undefined variable: suborder_status_text in C:\AppServ\www\testopencart\vqmod\vqcache\vq2-catalog_controller_account_order.php on line 344

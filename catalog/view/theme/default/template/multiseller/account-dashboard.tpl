@@ -59,49 +59,42 @@
 		<div class="subhead">
 		<table>
 			<tr>
-				<td><?php echo $ms_account_orders_id; ?></td>
-				<?php if (!$this->config->get('msconf_hide_customer_email')) { ?>
-					<td><?php echo $ms_account_orders_customer; ?></td>
-				<?php } ?>
-				<td><?php echo $ms_status; ?></td>
-				<td><?php echo $ms_account_orders_products; ?></td>
-				<td><?php echo $ms_date_created; ?></td>
-				<td><?php echo $ms_account_orders_total; ?></td>
-				<td><?php echo $ms_action; ?></td>
+				<td>Customer</td>
+				<td>Date created</td>
+				<td>Products</td>
+				<td>Status</td>
+				<td>Total amount</td>
 			</tr>
-		
-			<?php if (isset($orders) && $orders) { ?>
-			<?php foreach ($orders as $order) { ?>
 			<tr>
-				<td><?php echo $order['order_id']; ?></td>
-				<?php if (!$this->config->get('msconf_hide_customer_email')) { ?>
-					<td><?php echo $order['customer']; ?></td>
-				<?php } ?>
-				<td><?php echo $order['status']; ?></td>
-				<td class="left products">
-				<?php foreach ($order['products'] as $p) { ?>
-				<p>
-					<span class="name"><?php if ($p['quantity'] > 1) { echo "{$p['quantity']} x "; } ?> <a href="<?php echo $this->url->link('product/product', 'product_id=' . $p['product_id'], 'SSL'); ?>"><?php echo $p['name']; ?></a></span>
-                    <?php foreach ($p['options'] as $option) { ?>
-                    <br />
-                    &nbsp;<small> - <?php echo $option['name']; ?>:<?php echo $option['value']; ?></small>
-                    <?php } ?>
-                    <span class="total"><?php echo $this->currency->format($p['seller_net_amt'], $this->config->get('config_currency')); ?></span>
-				</p>
-				<?php } ?>
-				</td>
-				<td><?php echo $order['date_created']; ?></td>
-				<td><?php echo $order['total']; ?></td>
-				<td>
-					<a href="<?php echo $this->url->link('seller/account-order/viewOrder', 'order_id=' . $order['order_id']); ?>" class="ms-button ms-button-view" title="<?php echo $this->language->get('ms_view_modify') ?>"></a>
-				</td>
+				<td>Ignacio Duarte</td>
+				<td>31/01/2015</td>
+				<td class="mm_table_product"><a href="">HP LP3065</a><div></div>$100.00</td>
+				<td class="mm_complete">Complete</td>
+				<td>$100.00</td>
 			</tr>
-			<?php } ?>
-		<?php } else { ?>
 			<tr>
-				<td colspan="6" class="nothing"><?php echo $ms_account_orders_noorders; ?></td>
+				<td>Julie Chabin</td>
+				<td>30/01/2015</td>
+				<td><a href="">HP LP3065</a><div></div>$100.00</td>
+				<td class="mm_complete">Complete</td>
+				<td>$100.00</td>
 			</tr>
-		<?php } ?>
+			<tr>
+				<td>Rez Khan</td>
+				<td>04/02/2016</td>
+				<td><a href="">iPhone</a><div></div>$80.00
+				<a href="">iPhone</a><div></div>$80.00
+				<a href="">iPhone</a><div></div>$80.00</td>
+				<td class="mm_complete">Complete</td>
+				<td>$80.00</td>
+			</tr>
+			<tr>
+				<td>Julie Chabin</td>
+				<td>30/01/2015</td>
+				<td><a href="">HP LP3065</a><div></div>$100.00</td>
+				<td class="mm_complete">Complete</td>
+				<td>$100.00</td>
+			</tr>
 	</table>
 	</div>
 	</div>

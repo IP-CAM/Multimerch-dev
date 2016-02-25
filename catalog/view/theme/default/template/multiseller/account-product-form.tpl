@@ -273,73 +273,43 @@
 
 			<fieldset>
             	<h4>Optionals</h4>
+            	<div class="form-group">
+					<label class="mm_label"><?php echo $ms_account_product_enable_shipping; ?></label>
+					<div class="mm_form">
+						<div class="mm_minitable">
+							<table>
+								<thead>
+									<td>Value</td>
+									<td colspan="2">Pricing</td>
+								</thead>
+								<tr>
+									<td>Orange</td>
+									<td>$10</td>
+									<td><a href="mm_product_delete">X</a></td>
+								</tr>
+								<tr>
+									<td colspan="3">Simple Button</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
 			</fieldset>
 			<fieldset>
             	<h4>Images</h4>
-            	Attach images if you have problems with uploader.
+            	<div class="dragndrop">
+            	<u>Drag & Drop your images here<br>
+				Allowed extensions: png, jpg, jpeg</u>
+            	</div>
+            	<a href="">Attach images</a> if you have problems with uploader.
 			</fieldset>
 			<fieldset>
             	<h4>Files</h4>
-            	Attach files if you have problems with uploader.
-			</fieldset>
-			<fieldset>
-				<h4><?php echo $ms_account_product_files; ?></h4>
-
-				<div class="form-group <?php if ($msconf_images_limits[0] > 0) { echo 'required'; } ?>">
-					<label class="mm_label"><?php echo $ms_account_product_image; ?></label>
-					<div class="mm_form">
-						<!--<input type="file" name="ms-file-addimages" id="ms-file-addimages" />-->
-						<a name="ms-file-addimages" id="ms-file-addimages" class="btn btn-primary"><span><?php echo $ms_button_select_images; ?></span></a>
-						<p class="ms-note"><?php echo $ms_account_product_image_note; ?></p>
-						<div class="error" id="error_product_image"></div>
-
-						<div class="image progress"></div>
-
-						<div class="product_image_files">
-						<?php if (isset($product['images'])) { ?>
-						<?php $i = 0; ?>
-						<?php foreach ($product['images'] as $image) { ?>
-							<div class="ms-image">
-								<input type="hidden" name="product_images[]" value="<?php echo $image['name']; ?>" />
-								<img src="<?php echo $image['thumb']; ?>" />
-								<span class="ms-remove"></span>
-							</div>
-						<?php $i++; ?>
-						<?php } ?>
-						<?php } ?>
-						</div>
-					</div>
-				</div>
-
-				<div class="form-group <?php if ($msconf_downloads_limits[0] > 0) { echo 'required'; } ?>">
-					<label class="mm_label"><?php echo $ms_account_product_download; ?></label>
-					<div class="mm_form">
-						<!--<input type="file" name="ms-file-addfiles" id="ms-file-addfiles" />-->
-						<a name="ms-file-addfiles" id="ms-file-addfiles" class="btn btn-primary"><span><?php echo $ms_button_select_files; ?></span></a>
-						<p class="ms-note"><?php echo $ms_account_product_download_note; ?></p>
-						<div class="error" id="error_product_download"></div>
-						<div class="download progress"></div>
-						<div class="product_download_files">
-						<?php if (isset($product['downloads'])) { ?>
-						<?php $i = 0; ?>
-						<?php foreach ($product['downloads'] as $download) { ?>
-							<div class="ms-download">
-								<input type="hidden" name="product_downloads[<?php echo $i; ?>][download_id]" value="<?php echo isset($clone) ? '' : $download['id']; ?>" />
-								<input type="hidden" name="product_downloads[<?php echo $i; ?>][filename]" value="<?php echo (isset($clone)) ? $download['src'] : ''; ?>" />
-								<span class="ms-download-name"><?php echo $download['name']; ?></span>
-								<div class="ms-buttons">
-									<a href="<?php echo $download['href']; ?>" class="ms-button-download" title="<?php echo $ms_download; ?>"></a>
-										<!--<input id="ms-update-<?php echo $download['id']; ?>" name="ms-update-<?php echo $download['id']; ?>" class="ms-file-updatedownload" type="file" multiple="false" />-->
-									<a id="ms-update-<?php echo $download['id']; ?>" name="ms-update-<?php echo $download['id']; ?>" class="ms-file-updatedownload ms-button-update" title="<?php echo $ms_update; ?>"></a>
-									<a class="ms-button-delete" title="<?php echo $ms_delete; ?>"></a>
-								</div>
-							</div>
-						<?php $i++; ?>
-						<?php } ?>
-						<?php } ?>
-						</div>
-					</div>
-				</div>
+            	<div class="dragndrop">
+            	<u>Drag & Drop your images here<br>
+				Allowed extensions: zip, rar, pdf</u>
+            	</div>
+            	<a href="">Attach files</a> if you have problems with uploader.
 			</fieldset>
 
 			<?php if ($seller['ms.product_validation'] == MsProduct::MS_PRODUCT_VALIDATION_APPROVAL) { ?>

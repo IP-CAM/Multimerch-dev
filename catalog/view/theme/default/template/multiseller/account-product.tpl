@@ -31,42 +31,28 @@
     </ul>
     <div class="mm_dashboard">
     <h1><?php echo $ms_account_products_heading; ?></h1>
-
-	<div class="table-responsive">
-	<table class="list table table-bordered table-hover" id="list-products">
-	<thead>
-	<tr>
-		<td><?php echo $ms_account_products_image; ?></td>
-		<td><?php echo $ms_account_products_product; ?></td>
-		<td><?php echo $ms_account_product_price; ?></td>
-		<td><?php echo $ms_account_products_sales; ?></td>
-		<td><?php echo $ms_account_products_earnings; ?></td>
-		<td><?php echo $ms_account_products_status; ?></td>
-		<td><?php echo $ms_account_products_date; ?></td>
-		<td><?php echo $ms_account_products_listing_until; ?></td>
-		<td class="large"><?php echo $ms_account_products_action; ?></td>
-	</tr>
-
-	<tr class="filter">
-		<td></td>
-		<td><input type="text"/></td>
-		<td><input type="text"/></td>
-		<td><input type="text"/></td>
-		<td><input type="text"/></td>
-		<td></td>
-		<td><input type="text"/></td>
-		<td><input type="text"/></td>
-		<td></td>
-	</tr>
-	</thead>
-	<tbody></tbody>
-	</table>
+	<div class="mm_dashboard_table">
+		<div class="subhead">
+		<table>
+			<tr>
+				<td>Product</td>
+				<td>Price</td>
+				<td>Sales</td>
+				<td>Earnings</td>
+				<td>Action</td>
+			</tr>
+			<tr>
+				<td><img width="46px" height="46px" src="image/catalog/demo/canon_eos_5d_2.jpg">Apple Cinema 30”</td>
+				<td> <strike>$100.00</strike> $90</td>
+				<td>1</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a><a href="" class="table_minus"></a><a href="" class="table_edit"></a><a href="" class="table_delete"></a></td>
+			</tr>
+		</table>
 	</div>
-
-	  <div class="buttons clearfix">
-		<div class="pull-left"><a href="<?php echo $link_back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-		<div class="pull-right"><a href="<?php echo $link_create_product; ?>" class="btn btn-primary"><?php echo $ms_create_product; ?></a></div>
-	  </div>
+	</div>
+	<div class="table-responsive">
+	</div>
 	  <?php echo $content_bottom; ?></div>
 	<?php echo $column_right; ?></div>
 </div>
@@ -92,5 +78,5 @@
 			if (!confirm('<?php echo $ms_account_products_confirmdelete; ?>')) return false;
 		});
 	});
-</script>
+</script></div>
 <?php echo $footer; ?>
