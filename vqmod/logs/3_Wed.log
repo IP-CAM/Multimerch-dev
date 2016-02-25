@@ -1,0 +1,105 @@
+---------- Date: 2016-02-17 08:05:02 ~ IP : ::1 ----------
+REQUEST URI : /testopencart/index.php?route=product/product&product_id=42
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/sellegance_blog.xml
+   id        : OPENCART BLOG
+   version   : 1.0
+   vqmver    : 2.5.0
+   author    : Karl Pers - openthemer@gmail.com
+
+File Name    : catalog/controller/common/seo_url.php(4)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ($data['route'] == 'information/information' && $key == 'information_id'))
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-02-17 08:11:05 ~ IP : ::1 ----------
+REQUEST URI : /testopencart/index.php?route=product/product&product_id=42
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/sellegance_blog.xml
+   id        : OPENCART BLOG
+   version   : 1.0
+   vqmver    : 2.5.0
+   author    : Karl Pers - openthemer@gmail.com
+
+File Name    : catalog/controller/common/seo_url.php(4)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): ($data['route'] == 'information/information' && $key == 'information_id'))
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/multimerch_core_sellermenu.xml
+   id        : MultiMerch Core Seller Menu
+   version   : 
+   vqmver    : 
+   author    : http://multimerch.com/
+
+File Name    : catalog/view/theme/sellegance/template/common/header.tpl(0)
+VQModObject::applyMod - SEARCH NOT FOUND (SKIPPED): <li><a href="<?php echo $contact; ?>"><i class="fa fa-phone"></i></a> <span class="hidden-xs hidden-sm hidden-md"><?php echo $telephone; ?></span></li>
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-02-17 11:07:30 ~ IP : ::1 ----------
+REQUEST URI : /testopencart/
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/multimerch_c_hooks.xml
+   id        : 
+   version   : 
+   vqmver    : 
+   author    : 
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/product/product.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/account/login.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/common/header.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/account/account.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/module/account.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/multimerch_core.xml
+   id        : MultiMerch Digital Multivendor Marketplace Core
+   version   : 
+   vqmver    : 
+   author    : http://multimerch.com/
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/common/header.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/common/footer.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/multimerch_core_productpage.xml
+   id        : MultiMerch Core Product Page Mods
+   version   : 
+   vqmver    : 
+   author    : http://multimerch.com/
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/product/product.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/multimerch_core_sellerinfos.xml
+   id        : MultiMerch Core seller information in various places
+   version   : 
+   vqmver    : 
+   author    : http://multimerch.com/
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/checkout/cart.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/checkout/confirm.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/common/cart.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/mail/order.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/account/order_info.tpl] (SKIPPED)
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/multimerch_core_sellermenu.xml
+   id        : MultiMerch Core Seller Menu
+   version   : 
+   vqmver    : 
+   author    : http://multimerch.com/
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/account/login.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/common/header.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/account/account.tpl] (SKIPPED)
+VQModObject::parseMods - Could not resolve path for [catalog/view/theme/sellegance/template/module/account.tpl] (SKIPPED)
+
+----------------------------------------------------------------------
+
+
+---------- Date: 2016-02-17 15:53:48 ~ IP : ::1 ----------
+REQUEST URI : /testopencart/index.php?route=product/product&product_id=42
+MOD DETAILS:
+   modFile   : C:\AppServ\www\testopencart\vqmod/xml/multimerch_core_productpage.xml
+   id        : MultiMerch Core Product Page Mods
+   version   : 
+   vqmver    : 
+   author    : http://multimerch.com/
+
+File Name    : catalog/view/theme/default/template/product/product.tpl(0)
+Operation <search> tag missing
+----------------------------------------------------------------------
+
+
