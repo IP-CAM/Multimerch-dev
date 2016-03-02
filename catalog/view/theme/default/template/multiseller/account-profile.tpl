@@ -35,8 +35,8 @@
     <?php } ?>
 
     <h1><?php echo $ms_account_sellerinfo_heading; ?></h1>
-
-	<form id="ms-sellerinfo" class="ms-form form-horizontal">
+    <div class="tab-content">
+    <fieldset>
 		<input type="hidden" name="action" id="ms_action" />
 		<!-- todo status check update -->
 		<?php if ($seller['ms.seller_status'] == MsSeller::STATUS_DISABLED || $seller['ms.seller_status'] == MsSeller::STATUS_DELETED) { ?>
@@ -45,13 +45,13 @@
 
 		<div class="form-group required">
 			<?php if (!$this->config->get('msconf_change_seller_nickname') && !empty($seller['ms.nickname'])) { ?>
-				<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_nickname; ?></label>
-				<div class="col-sm-10">
+				<label class="mm_label mm_req"><?php echo $ms_account_sellerinfo_nickname; ?></label>
+				<div class="mm_form">
 					<b><?php echo $seller['ms.nickname']; ?></b>
 				</div>
 			<?php } else { ?>
-				<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_nickname; ?></label>
-				<div class="col-sm-10">
+				<label class="mm_label mm_req"><?php echo $ms_account_sellerinfo_nickname; ?></label>
+				<div class="mm_form">
 					<input type="text" class="form-control"  name="seller[nickname]" value="<?php echo $seller['ms.nickname']; ?>" />
 					<p class="ms-note"><?php echo $ms_account_sellerinfo_nickname_note; ?></p>
 				</div>
@@ -59,8 +59,8 @@
 		</div>
 
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_description; ?></label>
-			<div class="col-sm-10">
+			<label class="mm_label"><?php echo $ms_account_sellerinfo_description; ?></label>
+			<div class="mm_form">
 				<!-- todo strip tags if rte disabled -->
 				<textarea name="seller[description]" id="seller_textarea" class="form-control <?php echo $this->config->get('msconf_enable_rte') ? 'ckeditor' : ''; ?>"><?php echo $this->config->get('msconf_enable_rte') ? htmlspecialchars_decode($seller['ms.description']) : strip_tags(htmlspecialchars_decode($seller['ms.description'])); ?></textarea>
 				<p class="ms-note"><?php echo $ms_account_sellerinfo_description_note; ?></p>
@@ -68,16 +68,16 @@
 		</div>
 
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_company; ?></label>
-			<div class="col-sm-10">
+			<label class="mm_label"><?php echo $ms_account_sellerinfo_company; ?></label>
+			<div class="mm_form">
 				<input type="text" class="form-control"  name="seller[company]" value="<?php echo $seller['ms.company']; ?>" />
 				<p class="ms-note"><?php echo $ms_account_sellerinfo_company_note; ?></p>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_country; ?></label>
-			<div class="col-sm-10">
+			<label class="mm_label"><?php echo $ms_account_sellerinfo_country; ?></label>
+			<div class="mm_form">
 				<select name="seller[country]" class="form-control">
 					<option value="" selected="selected"><?php echo $ms_account_sellerinfo_country_dont_display; ?></option>
 					<?php foreach ($countries as $country) { ?>
@@ -89,28 +89,27 @@
 		</div>
 
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_zone; ?></label>
-			<div class="col-sm-10">
+			<label class="mm_label"><?php echo $ms_account_sellerinfo_zone; ?></label>
+			<div class="mm_form">
 				<select name="seller[zone]" class="form-control"></select>
 				<p class="ms-note"><?php echo $ms_account_sellerinfo_zone_note; ?></p>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_paypal; ?></label>
-			<div class="col-sm-10">
+			<label class="mm_label"><?php echo $ms_account_sellerinfo_paypal; ?></label>
+			<div class="mm_form">
 				<input type="text" class="form-control"  name="seller[paypal]" value="<?php echo $seller['ms.paypal']; ?>" />
 				<p class="ms-note"><?php echo $ms_account_sellerinfo_paypal_note; ?></p>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_avatar; ?></label>
-			<div class="col-sm-10">
-				<div class="buttons">
-					<a name="ms-file-selleravatar" id="ms-file-selleravatar" class="btn btn-primary"><span><?php echo $ms_button_select_image; ?></span></a>
-				</div>
-
+			<label class="mm_label"><?php echo $ms_account_sellerinfo_avatar; ?></label>
+			<div class="mm_form">
+				<div class="dragndropmini">
+            	<u>Drag & Drop your images here</u>
+            	</div>
 				<p class="ms-note"><?php echo $ms_account_sellerinfo_avatar_note; ?></p>
 				<p class="error" id="error_sellerinfo_avatar"></p>
 
@@ -128,12 +127,11 @@
 
 		<?php if ($this->config->get('msconf_enable_seller_banner')) { ?>
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_banner; ?></label>
-			<div class="col-sm-10">
-				<div class="buttons">
-					<a name="ms-file-sellerbanner" id="ms-file-sellerbanner" class="btn btn-primary"><span><?php echo $ms_button_select_image; ?></span></a>
-				</div>
-
+			<label class="mm_label"><?php echo $ms_account_sellerinfo_banner; ?></label>
+			<div class="mm_form">
+				<div class="dragndropmini">
+            	<u>Drag & Drop your images here</u>
+            	</div>
 				<p class="ms-note"><?php echo $ms_account_sellerinfo_banner_note; ?></p>
 				<p class="error" id="error_sellerinfo_banner"></p>
 
@@ -152,7 +150,7 @@
 
 		<?php if ($ms_account_sellerinfo_terms_note) { ?>
 		<div class="form-group required">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_terms; ?></label>
+			<label class="mm_label mm_req"><?php echo $ms_account_sellerinfo_terms; ?></label>
 			<div class="col-sm-10">
 				<p style="margin-bottom: 0">
 					<input type="checkbox" name="seller[terms]" value="1" />
@@ -164,14 +162,13 @@
 
 		<?php if ((!isset($seller['seller_id']) || $seller['ms.seller_status'] == MsSeller::STATUS_INCOMPLETE) && $seller_validation != MsSeller::MS_SELLER_VALIDATION_NONE) { ?>
 		<div class="form-group">
-			<label class="col-sm-2 control-label"><?php echo $ms_account_sellerinfo_reviewer_message; ?></label>
+			<label class="mm_label mm_req"><?php echo $ms_account_sellerinfo_reviewer_message; ?></label>
 			<div class="col-sm-10">
 				<textarea name="seller[reviewer_message]" id="message_textarea" class="form-control"></textarea>
 				<p class="ms-note"><?php echo $ms_account_sellerinfo_reviewer_message_note; ?></p>
 			</div>
 		</div>
 		<?php } ?>
-	</form>
 
 		<?php if (isset($group_commissions) && $group_commissions[MsCommission::RATE_SIGNUP]['flat'] > 0) { ?>
 			<p class="alert alert-warning ms-commission">
@@ -181,11 +178,11 @@
 
 			<?php if(isset($payment_form)) { ?><div class="ms-payment-form"><?php echo $payment_form; ?></div><?php } ?>
 		<?php } ?>
-
+		</fieldset></div>
 		<div class="buttons">
-			<div class="pull-left"><a href="<?php echo $link_back; ?>" class="btn btn-default"><span><?php echo $button_back; ?></span></a></div>
-			<?php if ($seller['ms.seller_status'] != MsSeller::STATUS_DISABLED && $seller['ms.seller_status'] != MsSeller::STATUS_DELETED) { ?>
-			<div class="pull-right"><a class="btn btn-primary" id="ms-submit-button"><span><?php echo $ms_button_save; ?></span></a></div>
+			<div class="pull-left"><a href="<?php echo $back; ?>"><span><?php echo $ms_button_cancel; ?></span></a></div>
+			<?php if ($seller['ms.seller_status'] != MsSeller::STATUS_DISABLED && $seller['ms.seller_status'] != MsSeller::STATUS_DELETED && $seller['ms.seller_status'] != MsSeller::STATUS_INCOMPLETE) { ?>
+			<div class="pull-right"><a class="btn btn-primary" id="ms-submit-button"><span><?php echo $ms_button_submit; ?></span></a></div>
 			<?php } ?>
 		</div>
     <?php echo $content_bottom; ?></div>
@@ -207,5 +204,5 @@
 		zoneNotSelectedError: '<?php echo htmlspecialchars($ms_account_sellerinfo_zone_not_selected, ENT_QUOTES, "UTF-8"); ?>'
 	};
 </script>
-
+</div></div>
 <?php echo $footer; ?>

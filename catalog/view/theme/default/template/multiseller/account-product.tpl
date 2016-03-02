@@ -30,20 +30,62 @@
     	<li><a href= "<?php echo $this->url->link('seller/account-profile', '', 'SSL'); ?>">Settings</a></li>
     </ul>
     <div class="mm_dashboard">
-    <h1><?php echo $ms_account_products_heading; ?></h1>
+    <div class="mm_head">
+			<h1><?php echo $ms_account_products_heading; ?></h1>
+			<a class="btn btn-primary" id="ms-submit-button"><span>Add new product</span></a>
+			<div id="search" class="input-group">
+			<input type="text" name="search" value="" placeholder="Search" class="form-control input-lg">
+			<span class="input-group-btn"><button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button></span>
+			</div>
+	</div>
 	<div class="mm_dashboard_table">
 		<div class="subhead">
 		<table>
+			<thead>
 			<tr>
-				<td>Product</td>
+				<td width="35%" colspan="2">Product</td>
 				<td>Price</td>
 				<td>Sales</td>
 				<td>Earnings</td>
-				<td>Action</td>
+				<td width="170px">Action</td>
+			</tr>
+			</thead>
+			<tr>
+				<td class="image"><img height="46px" src="image/catalog/demo/canon_eos_5d_2.jpg"></td>
+				<td>Apple Cinema 30”</td>
+				<td><div class="striked_price">$922 <strike>$100.00</strike></div></td>
+				<td>1</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a><a href="" class="table_minus"></a><a href="" class="table_edit"></a><a href="" class="table_delete"></a></td>
 			</tr>
 			<tr>
-				<td><img width="46px" height="46px" src="image/catalog/demo/canon_eos_5d_2.jpg">Apple Cinema 30”</td>
-				<td> <strike>$100.00</strike> $90</td>
+				<td class="image"><img height="46px" src="image/catalog/demo/htc_touch_hd_1.jpg"></td>
+				<td>HTC touch</td>
+				<td><div class="striked_price">$950 <strike>120.00</strike></div></td>
+				<td>1</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a><a href="" class="table_minus"></a><a href="" class="table_edit"></a><a href="" class="table_delete"></a></td>
+			</tr>
+			<tr>
+				<td class="image"><img height="46px" src="image/catalog/demo/iphone_1.jpg"></td>
+				<td>iPhone</td>
+				<td><div>$1,240</div></td>
+				<td>1</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a><a href="" class="table_minus"></a><a href="" class="table_edit"></a><a href="" class="table_delete"></a></td>
+			</tr>
+			<tr>
+				<td class="image"><img height="46px" src="image/catalog/demo/apple_cinema_30.jpg"></td>
+				<td>Apple Cinema 30”</td>
+				<td><div class="striked_price">$100 <strike>$100.00</strike></div></td>
+				<td>1</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a><a href="" class="table_minus"></a><a href="" class="table_edit"></a><a href="" class="table_delete"></a></td>
+			</tr>
+			<tr>
+				<td class="image"><img height="46px" src="image/catalog/demo/apple_cinema_30.jpg"></td>
+				<td>Apple Cinema 30”</td>
+				<td><div class="striked_price">$90 <strike>$100.00</strike></div></td>
 				<td>1</td>
 				<td>$100.00</td>
 				<td><a href="" class="table_search"></a><a href="" class="table_minus"></a><a href="" class="table_edit"></a><a href="" class="table_delete"></a></td>
@@ -51,8 +93,7 @@
 		</table>
 	</div>
 	</div>
-	<div class="table-responsive">
-	</div>
+	<ul class="pagination"><li class="active"><span>1</span></li><li><a href="http://localhost/testopencart/index.php?route=product/category&amp;path=20&amp;page=2">2</a></li><li><a href="http://localhost/testopencart/index.php?route=product/category&amp;path=20&amp;page=2">&gt;</a></li><li><a href="http://localhost/testopencart/index.php?route=product/category&amp;path=20&amp;page=2">&gt;|</a></li></ul>
 	  <?php echo $content_bottom; ?></div>
 	<?php echo $column_right; ?></div>
 </div>

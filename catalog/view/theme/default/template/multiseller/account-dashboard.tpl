@@ -31,7 +31,7 @@
     </ul>
     <div class="mm_dashboard">
 		<h1>Dashboard</h1>
-			<div>
+			<div class="mm_boards">
 			<div class="mm_dashboard_block">
 				<div class="head">Orders</div>
 				<a href="">1,952</a>
@@ -58,49 +58,77 @@
 		<div class="mm_dashboard_table">
 		<div class="subhead">
 		<table>
-			<tr>
-				<td>Customer</td>
+			<thead>
+				<td width="25%">Customer</td>
 				<td>Date created</td>
-				<td>Products</td>
+				<td width="35%">Products</td>
 				<td>Status</td>
 				<td>Total amount</td>
-			</tr>
+			</thead>
 			<tr>
 				<td>Ignacio Duarte</td>
 				<td>31/01/2015</td>
-				<td class="mm_table_product"><a href="">HP LP3065</a><div></div>$100.00</td>
-				<td class="mm_complete">Complete</td>
+				<td class="mm_table_product">
+					<dl>
+				 	<dt><a href="">HP LP3065</a></dt>
+				   	<dd>$100.00</dd>
+					</dl>
+				</td>
+				<td><div class="mm_complete">Complete</div></td>
 				<td>$100.00</td>
 			</tr>
 			<tr>
 				<td>Julie Chabin</td>
 				<td>30/01/2015</td>
-				<td><a href="">HP LP3065</a><div></div>$100.00</td>
-				<td class="mm_complete">Complete</td>
+				<td class="mm_table_product">
+					<dl>
+				 	<dt><a href="">HP LP3065</a></dt>
+				   	<dd>$100.00</dd>
+				   	<dt><a href="">Dell</a></dt>
+				   	<dd>$100.00</dd>
+				   	<dt><a href="">Galaxy Tab</a></dt>
+				   	<dd>$100.00</dd>
+					</dl>
+				</td>
+				<td><div class="mm_complete">Complete</td>
 				<td>$100.00</td>
 			</tr>
 			<tr>
 				<td>Rez Khan</td>
 				<td>04/02/2016</td>
-				<td><a href="">iPhone</a><div></div>$80.00
-				<a href="">iPhone</a><div></div>$80.00
-				<a href="">iPhone</a><div></div>$80.00</td>
-				<td class="mm_complete">Complete</td>
+				<td class="mm_table_product">
+					<dl>
+				 	<dt><a href="">iPhone 5</a></dt>
+				   	<dd>$400.00</dd>
+				   	<dt><a href="">Apple Cinema</a></dt>
+				   	<dd>$1200.00</dd>
+				   	<dt><a href="">Android</a></dt>
+				   	<dd>$100.00</dd>
+					</dl>
+				</td>
+				<td><div class="mm_complete">Complete</div></td>
 				<td>$80.00</td>
 			</tr>
 			<tr>
 				<td>Julie Chabin</td>
 				<td>30/01/2015</td>
-				<td><a href="">HP LP3065</a><div></div>$100.00</td>
-				<td class="mm_complete">Complete</td>
+				<td class="mm_table_product">
+					<dl>
+				 	<dt><a href="">HP LP3065</a></dt>
+				   	<dd>$100.00</dd>
+				   	<dt><a href="">Lenovo</a></dt>
+				   	<dd>$100.00</dd>
+				   	<dt><a href="">Mouse Acer</a></dt>
+				   	<dd>$100.00</dd>
+					</dl>
+				</td>
+				<td><div class="mm_complete">Complete</div></td>
 				<td>$100.00</td>
 			</tr>
 	</table>
 	</div>
 	</div>
-	<div class="buttons clearfix">
-        <div class="pull-left"><a href="<?php echo $link_back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-      </div>
+
 	</div></div>
     
 </div></div>

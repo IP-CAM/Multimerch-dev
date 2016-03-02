@@ -225,3 +225,6 @@ catalog\controller\account\transaction.php
 catalog\language\english\account\transaction.php
 catalog\model\account\transaction.php
 catalog\view\theme\default\template\account\transaction.tpl
+admin\language\english\common\login.php
+admin\view\template\common\login.tpl
+catalog\view\theme\default\template\multiseller\catalog-seller.tpl

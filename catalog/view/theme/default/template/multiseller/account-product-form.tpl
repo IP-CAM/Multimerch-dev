@@ -32,7 +32,7 @@
     <div class="mm_dashboard">
     <h1><?php echo $heading; ?></h1>
 
-
+		
      	<!-- general tab -->
 		<div class="tab-content ms-product">
      	<div id="tab-general" class="tab-pane active">
@@ -44,7 +44,6 @@
 				<?php } ?>
 			</ul>
 			<?php } ?>
-
 			<div class="tab-content">
 			<?php
 			reset($languages); $first = key($languages);
@@ -54,9 +53,14 @@
 				
 				<div class="ms-language-div tab-pane <?php if ($k == $first) { echo 'active'; } ?>" id="language<?php echo $langId; ?>">
                     <fieldset>
+                    <div class="mm_languagechoose">
+                    	<a href="">EN</a>
+                    	<a href="">RU</a>
+                    	<a href="">BR</a>
+                    </div>
                     <h4><?php echo $ms_account_product_name_description; ?></h4>
 					<div class="form-group <?php if ($k == $first) { echo 'required'; } ?>">
-						<label class="mm_label"><?php echo $ms_account_product_name; ?></label>
+						<label class="mm_label mm_req"><?php echo $ms_account_product_name; ?></label>
 						<div class="mm_form">
 							<input type="text" class="form-control" name="languages[<?php echo $langId; ?>][product_name]" value="<?php echo $product['languages'][$langId]['name']; ?>" />
 							<p class="ms-note"><?php echo $ms_account_product_name_note; ?></p>
@@ -65,7 +69,7 @@
 					</div>
 
 					<div class="form-group <?php if ($k == $first) { echo 'required'; } ?>">
-						<label class="mm_label"><?php echo $ms_account_product_description; ?></label>
+						<label class="mm_label mm_req"><?php echo $ms_account_product_description; ?></label>
 						<div class="mm_form">
 							<!-- todo strip tags if rte disabled -->
 							<textarea name="languages[<?php echo $langId; ?>][product_description]" class="form-control <?php echo $this->config->get('msconf_enable_rte') ? 'ckeditor' : ''; ?>"><?php echo $this->config->get('msconf_enable_rte') ? htmlspecialchars_decode($product['languages'][$langId]['description']) : strip_tags(htmlspecialchars_decode($product['languages'][$langId]['description'])); ?></textarea>
@@ -88,7 +92,7 @@
 
                     <?php if (in_array('metaKeywords', $this->config->get('msconf_product_included_fields'))) { ?>
 					<div class="form-group">
-						<label class="mm_label"><?php echo $ms_account_product_meta_keyword; ?></label>
+						<label class="mm_label mm_req"><?php echo $ms_account_product_meta_keyword; ?></label>
 						<div class="mm_form">
 							<!-- todo strip tags if rte disabled -->
 							<textarea class="form-control"  name="languages[<?php echo $langId; ?>][product_meta_keyword]"><?php echo strip_tags(htmlspecialchars_decode($product['languages'][$langId]['meta_keyword'])); ?></textarea>
@@ -110,7 +114,7 @@
 					<?php if (isset($multilang_attributes) && !empty($multilang_attributes)) { ?>
 					<?php foreach ($multilang_attributes as &$attr) { ?>
 					<div class="form-group <?php if ($attr['required'] && $k == $first) { echo 'required'; } ?>">
-						<label class="mm_label"><?php echo $attr['mad.name']; ?></label>
+						<label class="mm_label mm_req"><?php echo $attr['mad.name']; ?></label>
 						<div class="mm_form">
 							<?php if ($attr['attribute_type'] == MsAttribute::TYPE_TEXT) { ?>
 								<input type="text" class="form-control" name="languages[<?php echo $langId; ?>][product_attributes][<?php echo $attr['attribute_id']; ?>][value]" value="<?php echo isset($multilang_attribute_values[$attr['attribute_id']][$langId]) ? $multilang_attribute_values[$attr['attribute_id']][$langId]['value'] : '' ?>" />
@@ -129,9 +133,9 @@
 					<?php } ?>
 
 					<div class="form-group required">
-					<label class="mm_label"><?php echo $ms_account_product_price; ?></label>
-					<div class="mm_form">
-						<span class="vertical-align: auto"><?php echo $this->currency->getSymbolLeft($this->config->get('config_currency')); ?></span>
+					<label class="mm_label mm_req"><?php echo $ms_account_product_price; ?></label>
+					<div class="mm_form mm_price">
+						<span class="mm_currency"><?php echo $this->currency->getSymbolLeft($this->config->get('config_currency')); ?></span>
 						<input type="text" class="form-control inline" name="product_price" value="<?php echo $product['price']; ?>" <?php if (isset($seller['commissions']) && $seller['commissions'][MsCommission::RATE_LISTING]['percent'] > 0) { ?>class="ms-price-dynamic"<?php } ?> />
 						<span class="vertical-align: auto"><?php echo $this->currency->getSymbolRight($this->config->get('config_currency')); ?></span>
 						<p class="ms-note"><?php echo $ms_account_product_price_note; ?></p>
@@ -140,7 +144,7 @@
 				</div>
 
 				<div class="form-group required">
-					<label class="mm_label"><?php echo $ms_account_product_category; ?></label>
+					<label class="mm_label mm_req"><?php echo $ms_account_product_category; ?></label>
 					<div class="mm_form" id="product_category_block">
 						<?php if (!$msconf_allow_multiple_categories) { ?>
 							<select class="form-control" name="product_category">
@@ -285,14 +289,34 @@
 								<tr>
 									<td>Orange</td>
 									<td>$10</td>
-									<td><a href="mm_product_delete">X</a></td>
+									<td><a href="" class="mm_product_delete"></a></td>
 								</tr>
 								<tr>
-									<td colspan="3">Simple Button</td>
+									<td colspan="3"><a class="btn btn-default" href="">Add new</a></td>
 								</tr>
 							</table>
 						</div>
 					</div>
+					<label class="mm_label">Size</label>
+					<div class="mm_form">
+						<div class="mm_minitable">
+							<table>
+								<thead>
+									<td>Value</td>
+									<td colspan="2">Pricing</td>
+								</thead>
+								<tr>
+									<td>M</td>
+									<td></td>
+									<td><a href="" class="mm_product_delete"></a></td>
+								</tr>
+								<tr>
+									<td colspan="3"><a class="btn btn-default" href="">Add new</a></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<a href="<?php echo $back; ?>" class="btn btn-primary"><span>Add an option</span></a>
 				</div>
 			</fieldset>
 			<fieldset>
@@ -705,7 +729,7 @@
 		<?php } ?>
 
 		<div class="buttons">
-			<div class="pull-left"><a href="<?php echo $back; ?>" class="btn btn-default"><span><?php echo $ms_button_cancel; ?></span></a></div>
+			<div class="pull-left"><a href="<?php echo $back; ?>"><span><?php echo $ms_button_cancel; ?></span></a></div>
 			<?php if ($seller['ms.seller_status'] != MsSeller::STATUS_DISABLED && $seller['ms.seller_status'] != MsSeller::STATUS_DELETED && $seller['ms.seller_status'] != MsSeller::STATUS_INCOMPLETE) { ?>
 			<div class="pull-right"><a class="btn btn-primary" id="ms-submit-button"><span><?php echo $ms_button_submit; ?></span></a></div>
 			<?php } ?>

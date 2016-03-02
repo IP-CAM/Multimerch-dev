@@ -34,66 +34,88 @@
         <div class="alert alert-<?php echo $statusclass; ?>"><?php echo $statustext; ?></div>
     <?php } ?>
     <h1><?php echo $ms_account_transactions_heading; ?></h1>
-	<?php echo $ms_account_transactions_balance; ?> <b><?php echo $ms_balance_formatted; ?></b> <span style="color: gray"><?php echo $ms_reserved_formatted; ?></span><br />
-	<?php echo $ms_account_transactions_earnings; ?> <b><?php echo $earnings; ?></b><br />
+    <div class="mm_blocks">
+			<div class="mm_dashboard_block">
+				<div class="head">Your current balance</div>
+				<a href=""><?php echo $ms_balance_formatted; ?></a> <span style="color: gray"><?php echo $ms_reserved_formatted; ?></span>
+			</div>
 
+			<div class="mm_dashboard_block">
+				<div class="head">Your earnings to date</div>
+				<a href=""><?php echo $ms_balance_formatted; ?></a> <span style="color: gray"><?php echo $ms_reserved_formatted; ?></span>
+			</div>
+	</div>
 	<!-- BALANCE RECORDS -->
-	<h2><?php echo $ms_account_transactions_records; ?></h2>
-	<div class="table-responsive">
-	<table class="list table table-bordered table-hover" style="text-align: center" id="list-transactions">
-		<thead>
+	<div class="mm_submead"><h3><?php echo $ms_account_transactions_records; ?></h3></div>
+	<div class="mm_dashboard_table">
+		<div class="subhead">
+		<table>
+			<thead>
 			<tr>
-				<td class="tiny"><?php echo $ms_id; ?></td>
-				<td class="small"><?php echo $ms_account_transactions_amount; ?></td>
-				<td><?php echo $ms_account_transactions_description; ?></td>
-				<td class="medium"><?php echo $ms_date_created; ?></td>
+				<td width="40px">#<input></input></td>
+				<td width="100px">Amount<input></input></td>
+				<td>Description<input></input></td>
+				<td width="100px">Date created<input></input></td>
 			</tr>
-			
-			<tr class="filter">
-				<td><input type="text"/></td>
-				<td><input type="text"/></td>
-				<td><input type="text"/></td>
-				<td><input type="text"/></td>
+			</thead>
+			<tr>
+				<td>14</td>
+				<td>$90</td>
+				<td>Sale: HP LP3065 (-$0.00 commission)</td>
+				<td>31/01/2015</td>
 			</tr>
-		</thead>
-		
-		<tbody>
-		</tbody>
-	</table>
+			<tr>
+				<td>9</td>
+				<td>$90</td>
+				<td>Sale: HP LP3065 (-$0.00 commission)</td>
+				<td>31/01/2015</td>
+			</tr>
+			<tr>
+				<td>8</td>
+				<td>$90</td>
+				<td>Sale: HP LP3065 (-$0.00 commission)</td>
+				<td>31/01/2015</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>$90</td>
+				<td>Sale: iPhone (-$0.00 commission)</td>
+				<td>31/01/2015</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>$90</td>
+				<td>Sale: Canon EOS 5D (-$0.00 commission)</td>
+				<td>31/01/2015</td>
+			</tr>
+		</table>
 	</div>
-	<br />
-	
-	<!-- PAYMENTS -->
-	<h2><?php echo $ms_payment_payments; ?></h2>
-	<div class="table-responsive">
-	<table class="list table table-bordered table-hover" style="text-align: center" id="list-payments">
-	<thead>
-	<tr>
-		<td class="tiny"><?php echo $ms_id; ?></td>
-		<td class="medium"><?php echo $ms_type; ?></td>
-		<td class="small"><?php echo $ms_amount; ?></td>
-		<td><?php echo $ms_description; ?></td>
-		<td class="medium"><?php echo $ms_status; ?></td>
-		<td class="medium"><?php echo $ms_date_paid; ?></td>
-	</tr>
-	
-	<tr class="filter">
-		<td><input type="text"/></td>
-		<td></td>
-		<td><input type="text"/></td>
-		<td><input type="text"/></td>
-		<td></td>
-		<td><input type="text"/></td>
-	</tr>
-	</thead>
-	
-	<tbody></tbody>
-	</table>
 	</div>
 
-	  <div class="buttons clearfix">
-		<div class="pull-left"><a href="<?php echo $link_back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-	  </div>
+	<ul class="pagination"><li class="active"><span>1</span></li><li><a href="http://localhost/testopencart/index.php?route=product/category&amp;path=20&amp;page=2">2</a></li><li><a href="http://localhost/testopencart/index.php?route=product/category&amp;path=20&amp;page=2">&gt;</a></li><li><a href="http://localhost/testopencart/index.php?route=product/category&amp;path=20&amp;page=2">&gt;|</a></li></ul>
+	
+	<div class="cl"></div>
+
+	<!-- PAYMENTS -->
+	<div class="mm_submead"><h3><?php echo $ms_payment_payments; ?></h3></div>
+	<div class="mm_dashboard_table">
+		<div class="subhead">
+		<table>
+			<thead>
+			<tr>
+				<td>#</td>
+				<td>Type</td>
+				<td>Amount</td>
+				<td>Description</td>
+				<td>Status</td>
+				<td>Date paid</td>
+			</tr>
+			</thead>
+			<tr>
+				<td colspan="6" class="mm_emtytaple">No data available in table</td>
+			</tr>
+		</table>
+	</div></div>
 	  <?php echo $content_bottom; ?></div>
 	<?php echo $column_right; ?></div>
 </div>
@@ -125,5 +147,5 @@ $(function() {
 	});
 });
 </script>
-
+</div>
 <?php echo $footer; ?>

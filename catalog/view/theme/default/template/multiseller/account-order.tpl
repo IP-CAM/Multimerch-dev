@@ -32,37 +32,68 @@
     <div class="mm_dashboard">
 
 		<h1><?php echo $ms_account_orders_heading; ?></h1>
-
-		<div class="table-responsive">
-        <table class="list table table-bordered table-hover" id="list-orders">
-		<thead>
+		<div class="mm_dashboard_table">
+		<div class="subhead">
+		<table>
+			<thead>
 			<tr>
-				<td class="tiny"><?php echo $ms_account_orders_id; ?></td>
-				<td class="large"><?php echo $ms_account_orders_customer; ?></td>
-				<td><?php echo $ms_status; ?></td>
-				<td><?php echo $ms_account_orders_products; ?></td>
-				<td class="medium"><?php echo $ms_date_created; ?></td>
-				<td class="small"><?php echo $ms_account_orders_total; ?></td>
-				<td class="small"><?php echo $ms_action; ?></td>
+				<td width="40px">#<input></input></td>
+				<td>Customer<input></input></td>
+				<td width="100px">Status</td>
+				<td>Products<input></input></td>
+				<td width="100px">Date created<input></input></td>
+				<td width="100px">Total amount</td>
+				<td width="50px">Action</td>
 			</tr>
-			<tr class="filter">
-				<td><input type="text"/></td>
-				<td><input type="text"/></td>
-				<td></td>
-				<td><input type="text"/></td>
-				<td><input type="text"/></td>
-				<td><input type="text"/></td>
-				<td></td>
+			</thead>
+			<tr>
+				<td>14</td>
+				<td>Ignacio Duarte<a class="mm_emailcustomer" href="">vendor4@example.com</a></td>
+				<td><div class="mm_complete">Complete</div></td>
+				<td><a href="">HP LP3065</a></td>
+				<td>31/10/2015</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a></td>
 			</tr>
-		</thead>
-		
-		<tbody></tbody>
+			<tr>
+				<td>7</td>
+				<td>Ignacio Duarte<a class="mm_emailcustomer" href="">vendor4@example.com</a></td>
+				<td><div class="mm_complete">Complete</div></td>
+				<td><a href="">HP LP3065</a></td>
+				<td>31/10/2015</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a></td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Ignacio Duarte<a class="mm_emailcustomer" href="">vendor4@example.com</a></td>
+				<td><div class="mm_complete">Complete</div></td>
+				<td><a href="">HP LP3065</a></td>
+				<td>31/10/2015</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_delete"></a></td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Ignacio Duarte<a class="mm_emailcustomer" href="">vendor4@example.com</a></td>
+				<td><div class="mm_complete">Complete</div></td>
+				<td><a href="">HP LP3065</a></td>
+				<td>31/10/2015</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a></td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Ignacio Duarte<a class="mm_emailcustomer" href="">vendor4@example.com</a></td>
+				<td><div class="mm_complete">Complete</div></td>
+				<td><a href="">HP LP3065</a></td>
+				<td>31/10/2015</td>
+				<td>$100.00</td>
+				<td><a href="" class="table_search"></a></td>
+			</tr>
 		</table>
 		</div>
-
-      <div class="buttons clearfix">
-        <div class="pull-left"><a href="<?php echo $link_back; ?>" class="btn btn-default"><?php echo $button_back; ?></a></div>
-      </div>
+	</div>
       <?php echo $content_bottom; ?></div>
     <?php echo $column_right; ?></div>
 </div>
